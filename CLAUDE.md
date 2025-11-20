@@ -1,318 +1,318 @@
-# CLAUDE.md - AI Assistant Guide for topsteps_code
+# CLAUDE.md - topsteps_code 專案的 AI 助理指南
 
-**Last Updated:** 2025-11-20
-**Repository Owner:** CIOU,GUO-YU (zxcvbn1294)
-**License:** MIT
-**Created:** October 8, 2025
-
----
-
-## Table of Contents
-
-1. [Repository Overview](#repository-overview)
-2. [Current Project State](#current-project-state)
-3. [Repository Structure](#repository-structure)
-4. [Git Workflow & Branch Strategy](#git-workflow--branch-strategy)
-5. [Development Guidelines](#development-guidelines)
-6. [Code Conventions](#code-conventions)
-7. [Testing Strategy](#testing-strategy)
-8. [Documentation Standards](#documentation-standards)
-9. [AI Assistant Workflow](#ai-assistant-workflow)
-10. [Future Development Roadmap](#future-development-roadmap)
+**最後更新：** 2025-11-20
+**專案擁有者：** CIOU,GUO-YU (zxcvbn1294)
+**授權：** MIT
+**建立日期：** 2025 年 10 月 8 日
 
 ---
 
-## Repository Overview
+## 目錄
 
-### Purpose
-This is a starter repository for the **topsteps_code** project. The repository was initialized in October 2025 and is currently in its early stages.
-
-### Repository Information
-- **GitHub URL:** https://github.com/zxcvbn1294/topsteps_code
-- **Primary Language:** To be determined (no source code yet)
-- **License:** MIT License (Copyright 2025 CIOU,GUO-YU)
-- **Development Tool:** Claude Code integrated
-
-### Key Stakeholders
-- **Owner/Author:** CIOU,GUO-YU (jack chiou)
-- **AI Assistant:** Claude (Anthropic)
+1. [專案概覽](#專案概覽)
+2. [目前專案狀態](#目前專案狀態)
+3. [專案結構](#專案結構)
+4. [Git 工作流程與分支策略](#git-工作流程與分支策略)
+5. [開發指南](#開發指南)
+6. [程式碼規範](#程式碼規範)
+7. [測試策略](#測試策略)
+8. [文件標準](#文件標準)
+9. [AI 助理工作流程](#ai-助理工作流程)
+10. [未來開發藍圖](#未來開發藍圖)
 
 ---
 
-## Current Project State
+## 專案概覽
 
-### Status: **INITIAL SETUP PHASE**
+### 目的
+這是 **topsteps_code** 專案的起始儲存庫。此儲存庫於 2025 年 10 月初始化，目前處於早期階段。
 
-As of November 2025, this repository contains:
-- ✅ MIT License file
-- ✅ Git repository initialized
-- ✅ Test file (`test.txt`) for workflow verification
-- ❌ No source code
-- ❌ No package manager configuration
-- ❌ No build tooling
-- ❌ No testing framework
-- ❌ No documentation (README.md)
+### 儲存庫資訊
+- **GitHub 網址：** https://github.com/zxcvbn1294/topsteps_code
+- **主要語言：** 待定（目前尚無原始碼）
+- **授權：** MIT License（版權所有 2025 CIOU,GUO-YU）
+- **開發工具：** 整合 Claude Code
 
-### Commit History
+### 主要相關人員
+- **擁有者/作者：** CIOU,GUO-YU (jack chiou)
+- **AI 助理：** Claude (Anthropic)
+
+---
+
+## 目前專案狀態
+
+### 狀態：**初始設定階段**
+
+截至 2025 年 11 月，此儲存庫包含：
+- ✅ MIT License 檔案
+- ✅ 已初始化 Git 儲存庫
+- ✅ 測試檔案（`test.txt`）用於工作流程驗證
+- ❌ 無原始碼
+- ❌ 無套件管理器設定
+- ❌ 無建置工具
+- ❌ 無測試框架
+- ❌ 無文件（README.md）
+
+### 提交歷史
 ```
-b2a5f2c - Merge branch 'main' (Oct 8, 2025)
-dd42544 - 新增測試檔案 [Added test file] (Oct 8, 2025) - with Claude
-04cd5c0 - Initial commit (Oct 8, 2025)
+b2a5f2c - Merge branch 'main' (2025年10月8日)
+dd42544 - 新增測試檔案 (2025年10月8日) - 與 Claude 協作
+04cd5c0 - Initial commit (2025年10月8日)
 ```
 
-The Chinese commit message "新增測試檔案" indicates this may be developed by Chinese-speaking contributors, though documentation should be maintained in English for broader accessibility.
+提交訊息「新增測試檔案」表明此專案由中文開發者維護，文件將以中文撰寫以提供更好的可讀性。
 
 ---
 
-## Repository Structure
+## 專案結構
 
-### Current Structure
+### 目前結構
 ```
 topsteps_code/
-├── LICENSE              # MIT License file
-├── test.txt            # Test file for git workflow
-├── CLAUDE.md           # This file - AI assistant guide
-└── .git/               # Git metadata
+├── LICENSE              # MIT 授權檔案
+├── test.txt            # Git 工作流程測試檔案
+├── CLAUDE.md           # 本檔案 - AI 助理指南
+└── .git/               # Git 元資料
 ```
 
-### Recommended Future Structure
+### 建議的未來結構
 
-When development begins, consider organizing the project as follows:
+當開始開發時，建議按照以下方式組織專案：
 
 ```
 topsteps_code/
-├── .github/            # GitHub workflows and templates
-│   ├── workflows/      # CI/CD pipelines
-│   └── ISSUE_TEMPLATE/ # Issue templates
-├── docs/               # Project documentation
-│   ├── api/           # API documentation
-│   ├── guides/        # User guides
-│   └── architecture/  # Architecture decisions
-├── src/               # Source code
-│   ├── components/    # Reusable components (if applicable)
-│   ├── utils/         # Utility functions
-│   ├── services/      # Business logic/services
-│   └── config/        # Configuration files
-├── tests/             # Test files
-│   ├── unit/          # Unit tests
-│   ├── integration/   # Integration tests
-│   └── e2e/           # End-to-end tests
-├── scripts/           # Build and deployment scripts
-├── .gitignore         # Git ignore rules
-├── package.json       # Dependencies (if Node.js)
-├── README.md          # Project overview
-├── CLAUDE.md          # This file
-├── CONTRIBUTING.md    # Contribution guidelines
-├── CHANGELOG.md       # Version history
-└── LICENSE            # MIT License
+├── .github/            # GitHub 工作流程和模板
+│   ├── workflows/      # CI/CD 管線
+│   └── ISSUE_TEMPLATE/ # Issue 模板
+├── docs/               # 專案文件
+│   ├── api/           # API 文件
+│   ├── guides/        # 使用指南
+│   └── architecture/  # 架構決策
+├── src/               # 原始碼
+│   ├── components/    # 可重用元件（如適用）
+│   ├── utils/         # 工具函式
+│   ├── services/      # 商業邏輯/服務
+│   └── config/        # 設定檔案
+├── tests/             # 測試檔案
+│   ├── unit/          # 單元測試
+│   ├── integration/   # 整合測試
+│   └── e2e/           # 端對端測試
+├── scripts/           # 建置和部署腳本
+├── .gitignore         # Git 忽略規則
+├── package.json       # 依賴項（如果是 Node.js）
+├── README.md          # 專案概述
+├── CLAUDE.md          # 本檔案
+├── CONTRIBUTING.md    # 貢獻指南
+├── CHANGELOG.md       # 版本歷史
+└── LICENSE            # MIT 授權
 ```
 
 ---
 
-## Git Workflow & Branch Strategy
+## Git 工作流程與分支策略
 
-### Branch Naming Convention
+### 分支命名慣例
 
-#### Claude Code Branches (AI Development)
-- **Format:** `claude/claude-md-<session-id>`
-- **Example:** `claude/claude-md-mi7ev5g5uprc67u8-01GbonEGEV3zCN58trxhTCV5`
-- **Critical:** All AI assistant branches MUST start with `claude/` prefix
-- **Note:** Pushing to branches without correct naming will fail with 403 error
+#### Claude Code 分支（AI 開發）
+- **格式：** `claude/claude-md-<session-id>`
+- **範例：** `claude/claude-md-mi7ev5g5uprc67u8-01GbonEGEV3zCN58trxhTCV5`
+- **重要：** 所有 AI 助理分支必須以 `claude/` 前綴開頭
+- **注意：** 推送到命名不正確的分支將會失敗並返回 403 錯誤
 
-#### Human Developer Branches
-- **Feature branches:** `feature/<feature-name>`
-- **Bug fixes:** `fix/<bug-description>`
-- **Hotfixes:** `hotfix/<issue-number>`
-- **Experimental:** `experiment/<experiment-name>`
+#### 人類開發者分支
+- **功能分支：** `feature/<功能名稱>`
+- **錯誤修復：** `fix/<錯誤描述>`
+- **熱修復：** `hotfix/<issue-編號>`
+- **實驗性：** `experiment/<實驗名稱>`
 
-### Branch Strategy
+### 分支策略
 
-1. **Main Branch:** `main` (protected)
-   - Production-ready code only
-   - Requires pull request reviews
-   - All commits must pass CI/CD checks
+1. **主分支：** `main`（受保護）
+   - 僅包含可用於生產環境的程式碼
+   - 需要 pull request 審查
+   - 所有提交必須通過 CI/CD 檢查
 
-2. **Development Branches:** Various feature/fix branches
-   - Short-lived branches for specific changes
-   - Merged via pull requests
-   - Deleted after successful merge
+2. **開發分支：** 各種功能/修復分支
+   - 針對特定變更的短期分支
+   - 透過 pull request 合併
+   - 成功合併後刪除
 
-3. **Claude Branches:** `claude/*`
-   - AI-assisted development sessions
-   - Created per session with unique session ID
-   - Must be pushed with `-u origin <branch-name>`
+3. **Claude 分支：** `claude/*`
+   - AI 輔助開發會話
+   - 每個會話建立唯一的 session ID
+   - 必須使用 `-u origin <branch-name>` 推送
 
-### Git Commands
+### Git 指令
 
-#### For AI Assistants (Claude)
+#### AI 助理（Claude）使用
 ```bash
-# Pushing changes (CRITICAL: use -u flag)
+# 推送變更（重要：使用 -u 旗標）
 git push -u origin claude/claude-md-<session-id>
 
-# Network error handling: Retry up to 4 times with exponential backoff
-# Retry delays: 2s, 4s, 8s, 16s
+# 網路錯誤處理：最多重試 4 次，採用指數退避
+# 重試延遲：2秒、4秒、8秒、16秒
 
-# Fetching specific branches
+# 取得特定分支
 git fetch origin <branch-name>
 
-# Pulling changes
+# 拉取變更
 git pull origin <branch-name>
 ```
 
-#### Commit Message Format
+#### 提交訊息格式
 ```
-<type>: <subject>
+<類型>: <主題>
 
-<body>
+<內容>
 
-<footer>
+<頁尾>
 ```
 
-**Types:**
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation changes
-- `style`: Code style changes (formatting, no logic change)
-- `refactor`: Code refactoring
-- `test`: Adding or updating tests
-- `chore`: Maintenance tasks
+**類型：**
+- `feat`: 新功能
+- `fix`: 錯誤修復
+- `docs`: 文件變更
+- `style`: 程式碼風格變更（格式化，無邏輯變更）
+- `refactor`: 程式碼重構
+- `test`: 新增或更新測試
+- `chore`: 維護任務
 
-**Example:**
+**範例：**
 ```
-feat: add user authentication module
+feat: 新增使用者驗證模組
 
-Implemented JWT-based authentication with refresh tokens.
-Added login, logout, and token refresh endpoints.
+實作基於 JWT 的驗證機制，包含更新令牌功能。
+新增登入、登出和令牌更新端點。
 
 Co-authored-by: Claude <noreply@anthropic.com>
 ```
 
 ---
 
-## Development Guidelines
+## 開發指南
 
-### Before Starting Development
+### 開始開發前
 
-1. **Determine Project Type**
-   - Web application (frontend/backend/fullstack)
-   - Library/package
-   - CLI tool
-   - API service
-   - Mobile app
-   - Desktop application
+1. **確定專案類型**
+   - 網頁應用程式（前端/後端/全端）
+   - 函式庫/套件
+   - CLI 工具
+   - API 服務
+   - 行動應用程式
+   - 桌面應用程式
 
-2. **Choose Technology Stack**
-   - Programming language(s)
-   - Framework(s)
-   - Database(s)
-   - Build tools
-   - Testing frameworks
+2. **選擇技術堆疊**
+   - 程式語言
+   - 框架
+   - 資料庫
+   - 建置工具
+   - 測試框架
 
-3. **Set Up Project Configuration**
-   - Initialize package manager (npm, pip, cargo, etc.)
-   - Configure linters and formatters
-   - Set up pre-commit hooks
-   - Create .gitignore file
+3. **設定專案配置**
+   - 初始化套件管理器（npm、pip、cargo 等）
+   - 設定 linter 和格式化工具
+   - 設定 pre-commit hooks
+   - 建立 .gitignore 檔案
 
-4. **Create Initial Documentation**
-   - README.md with project overview
-   - CONTRIBUTING.md for contributors
-   - Code of Conduct (optional)
+4. **建立初始文件**
+   - 包含專案概述的 README.md
+   - 供貢獻者使用的 CONTRIBUTING.md
+   - 行為準則（選用）
 
-### Security Best Practices
+### 安全最佳實踐
 
-⚠️ **Critical Security Reminders:**
-- Never commit secrets, API keys, or credentials
-- Use environment variables for sensitive configuration
-- Implement input validation to prevent injection attacks
-- Follow OWASP Top 10 guidelines
-- Sanitize user inputs to prevent XSS
-- Use parameterized queries to prevent SQL injection
-- Implement proper authentication and authorization
-- Keep dependencies updated for security patches
+⚠️ **重要安全提醒：**
+- 絕不提交機密資訊、API 金鑰或憑證
+- 使用環境變數存放敏感設定
+- 實作輸入驗證以防止注入攻擊
+- 遵循 OWASP Top 10 指南
+- 清理使用者輸入以防止 XSS
+- 使用參數化查詢以防止 SQL 注入
+- 實作適當的身分驗證和授權
+- 保持依賴項更新以修補安全漏洞
 
-### Code Quality Standards
+### 程式碼品質標準
 
-- **Linting:** Configure and enforce code linting
-- **Formatting:** Use consistent code formatting (Prettier, Black, rustfmt, etc.)
-- **Type Safety:** Use TypeScript, type hints, or static analysis where applicable
-- **Code Review:** All changes should be reviewed via pull requests
-- **Documentation:** Document public APIs, complex logic, and architectural decisions
+- **Linting：** 設定並強制執行程式碼檢查
+- **格式化：** 使用一致的程式碼格式（Prettier、Black、rustfmt 等）
+- **型別安全：** 適當使用 TypeScript、型別提示或靜態分析
+- **程式碼審查：** 所有變更應透過 pull request 進行審查
+- **文件：** 記錄公開 API、複雜邏輯和架構決策
 
 ---
 
-## Code Conventions
+## 程式碼規範
 
-### General Principles
+### 一般原則
 
-1. **Readability First:** Code should be self-documenting
-2. **DRY Principle:** Don't Repeat Yourself
-3. **SOLID Principles:** Follow object-oriented design principles
-4. **KISS:** Keep It Simple, Stupid
-5. **YAGNI:** You Aren't Gonna Need It (avoid over-engineering)
+1. **可讀性優先：** 程式碼應該自我說明
+2. **DRY 原則：** 不要重複自己（Don't Repeat Yourself）
+3. **SOLID 原則：** 遵循物件導向設計原則
+4. **KISS：** 保持簡單（Keep It Simple, Stupid）
+5. **YAGNI：** 你不會需要它（You Aren't Gonna Need It）（避免過度設計）
 
-### Naming Conventions
+### 命名慣例
 
-#### Variables and Functions
+#### 變數和函式
 ```
-camelCase      - JavaScript/TypeScript variables and functions
-snake_case     - Python variables and functions
-PascalCase     - Classes, interfaces, types
-SCREAMING_CASE - Constants
-kebab-case     - File names, URLs
+camelCase      - JavaScript/TypeScript 變數和函式
+snake_case     - Python 變數和函式
+PascalCase     - 類別、介面、型別
+SCREAMING_CASE - 常數
+kebab-case     - 檔案名稱、URLs
 ```
 
-#### Files and Directories
-- Use descriptive, lowercase names
-- Separate words with hyphens or underscores (be consistent)
-- Component files should match component names
+#### 檔案和目錄
+- 使用描述性的小寫名稱
+- 使用連字號或底線分隔單字（保持一致）
+- 元件檔案應與元件名稱相符
 
-### Comments and Documentation
+### 註解和文件
 
 ```javascript
 /**
- * Brief description of function
+ * 函式的簡短描述
  *
- * @param {Type} paramName - Description of parameter
- * @returns {Type} Description of return value
- * @throws {ErrorType} Description of when error is thrown
+ * @param {Type} paramName - 參數描述
+ * @returns {Type} 返回值描述
+ * @throws {ErrorType} 拋出錯誤的時機描述
  *
  * @example
  * functionName(arg1, arg2);
  */
 function functionName(paramName) {
-  // Implementation
+  // 實作
 }
 ```
 
-### Error Handling
+### 錯誤處理
 
-- Always handle errors explicitly
-- Use try-catch blocks appropriately
-- Log errors with sufficient context
-- Return meaningful error messages
-- Don't expose internal error details to end users
+- 始終明確處理錯誤
+- 適當使用 try-catch 區塊
+- 記錄錯誤時提供足夠的上下文
+- 返回有意義的錯誤訊息
+- 不要向終端使用者暴露內部錯誤細節
 
 ---
 
-## Testing Strategy
+## 測試策略
 
-### Testing Pyramid
+### 測試金字塔
 
-1. **Unit Tests (70%)**
-   - Test individual functions and methods
-   - Fast, isolated, deterministic
-   - Mock external dependencies
+1. **單元測試（70%）**
+   - 測試個別函式和方法
+   - 快速、隔離、確定性
+   - 模擬外部依賴
 
-2. **Integration Tests (20%)**
-   - Test interaction between components
-   - Verify data flow and API contracts
+2. **整合測試（20%）**
+   - 測試元件之間的互動
+   - 驗證資料流和 API 契約
 
-3. **End-to-End Tests (10%)**
-   - Test complete user workflows
-   - Verify system behavior from user perspective
+3. **端對端測試（10%）**
+   - 測試完整的使用者工作流程
+   - 從使用者角度驗證系統行為
 
-### Test Organization
+### 測試組織
 
 ```
 tests/
@@ -327,235 +327,235 @@ tests/
     └── test-data.json
 ```
 
-### Test Naming Convention
+### 測試命名慣例
 
 ```javascript
 describe('ComponentName', () => {
   describe('methodName', () => {
     it('should do something when condition is met', () => {
-      // Arrange
-      // Act
-      // Assert
+      // Arrange（準備）
+      // Act（執行）
+      // Assert（斷言）
     });
   });
 });
 ```
 
-### Code Coverage Goals
+### 程式碼覆蓋率目標
 
-- **Minimum:** 80% overall coverage
-- **Critical paths:** 100% coverage
-- **New code:** Should not decrease overall coverage
+- **最低：** 80% 整體覆蓋率
+- **關鍵路徑：** 100% 覆蓋率
+- **新程式碼：** 不應降低整體覆蓋率
 
 ---
 
-## Documentation Standards
+## 文件標準
 
-### README.md Structure
+### README.md 結構
 
 ```markdown
-# Project Name
+# 專案名稱
 
-Brief description (1-2 sentences)
+簡短描述（1-2 句話）
 
-## Features
-- Feature 1
-- Feature 2
+## 功能
+- 功能 1
+- 功能 2
 
-## Installation
-Step-by-step installation instructions
+## 安裝
+逐步安裝說明
 
-## Usage
-Code examples and usage instructions
+## 使用方式
+程式碼範例和使用說明
 
-## API Documentation
-Link to detailed API docs
+## API 文件
+詳細 API 文件連結
 
-## Contributing
-Link to CONTRIBUTING.md
+## 貢獻
+CONTRIBUTING.md 連結
 
-## License
-MIT License - see LICENSE file
+## 授權
+MIT License - 請參閱 LICENSE 檔案
 ```
 
-### Code Documentation
+### 程式碼文件
 
-- **Public APIs:** Must be documented with JSDoc/docstrings
-- **Complex Logic:** Add explanatory comments
-- **Architecture Decisions:** Document in `docs/architecture/`
-- **API Endpoints:** Maintain OpenAPI/Swagger documentation
+- **公開 API：** 必須使用 JSDoc/docstrings 記錄
+- **複雜邏輯：** 新增解釋性註解
+- **架構決策：** 記錄在 `docs/architecture/`
+- **API 端點：** 維護 OpenAPI/Swagger 文件
 
-### Inline Documentation
+### 行內文件
 
 ```javascript
-// Good: Explains WHY
-// Retry with exponential backoff to handle network instability
+// 良好：解釋「為什麼」
+// 使用指數退避重試以處理網路不穩定
 await retryWithBackoff(apiCall, { maxAttempts: 4 });
 
-// Bad: Explains WHAT (code already shows this)
-// Call retry function with api call
+// 不佳：解釋「做什麼」（程式碼已經說明）
+// 呼叫重試函式與 api call
 await retryWithBackoff(apiCall, { maxAttempts: 4 });
 ```
 
 ---
 
-## AI Assistant Workflow
+## AI 助理工作流程
 
-### When Working as Claude Code Assistant
+### 作為 Claude Code 助理時
 
-#### 1. Understanding the Task
-- Read the user's request carefully
-- Ask clarifying questions if requirements are ambiguous
-- Check existing code and conventions before starting
+#### 1. 理解任務
+- 仔細閱讀使用者的請求
+- 如果需求不明確，提出澄清問題
+- 開始前檢查現有程式碼和慣例
 
-#### 2. Planning Phase
-- Use `TodoWrite` tool for complex multi-step tasks
-- Break down large tasks into smaller, manageable steps
-- Present plan to user before implementation (for significant changes)
+#### 2. 規劃階段
+- 對複雜的多步驟任務使用 `TodoWrite` 工具
+- 將大型任務分解為較小、可管理的步驟
+- 在實作前向使用者展示計劃（針對重大變更）
 
-#### 3. Implementation Phase
-- Read existing files before editing
-- Prefer editing existing files over creating new ones
-- Follow existing code patterns and conventions
-- Write secure code (avoid OWASP Top 10 vulnerabilities)
-- Include error handling and validation
+#### 3. 實作階段
+- 編輯前先讀取現有檔案
+- 優先編輯現有檔案而非建立新檔案
+- 遵循現有的程式碼模式和慣例
+- 撰寫安全的程式碼（避免 OWASP Top 10 漏洞）
+- 包含錯誤處理和驗證
 
-#### 4. Testing Phase
-- Run existing tests to ensure no regression
-- Add tests for new functionality
-- Verify the implementation works as expected
+#### 4. 測試階段
+- 執行現有測試以確保沒有退化
+- 為新功能新增測試
+- 驗證實作是否如預期運作
 
-#### 5. Documentation Phase
-- Update relevant documentation
-- Add code comments for complex logic
-- Update CHANGELOG.md for significant changes
+#### 5. 文件階段
+- 更新相關文件
+- 為複雜邏輯新增程式碼註解
+- 針對重大變更更新 CHANGELOG.md
 
-#### 6. Commit Phase
-- Write clear, descriptive commit messages
-- Follow commit message format conventions
-- Use co-authoring attribution when appropriate
-- **ONLY commit when explicitly asked by the user**
+#### 6. 提交階段
+- 撰寫清晰、描述性的提交訊息
+- 遵循提交訊息格式慣例
+- 適當時使用共同作者署名
+- **僅在使用者明確要求時提交**
 
-#### 7. Push Phase
-- Use `git push -u origin <branch-name>`
-- Verify branch name starts with `claude/`
-- Retry on network errors (up to 4 times with exponential backoff)
+#### 7. 推送階段
+- 使用 `git push -u origin <branch-name>`
+- 驗證分支名稱以 `claude/` 開頭
+- 網路錯誤時重試（最多 4 次，採用指數退避）
 
-### Tool Usage Best Practices
+### 工具使用最佳實踐
 
-1. **File Operations:**
-   - Use `Read` instead of `cat`
-   - Use `Edit` instead of `sed/awk`
-   - Use `Write` instead of `echo >>`
-   - Use `Glob` instead of `find` or `ls`
-   - Use `Grep` instead of `grep` or `rg`
+1. **檔案操作：**
+   - 使用 `Read` 而非 `cat`
+   - 使用 `Edit` 而非 `sed/awk`
+   - 使用 `Write` 而非 `echo >>`
+   - 使用 `Glob` 而非 `find` 或 `ls`
+   - 使用 `Grep` 而非 `grep` 或 `rg`
 
-2. **Code Exploration:**
-   - Use `Task` tool with `subagent_type=Explore` for broad codebase exploration
-   - Use direct tools (`Grep`, `Glob`) for specific file/pattern searches
-   - Read files in parallel when exploring multiple areas
+2. **程式碼探索：**
+   - 對廣泛的程式碼庫探索使用 `Task` 工具，設定 `subagent_type=Explore`
+   - 對特定檔案/模式搜尋使用直接工具（`Grep`、`Glob`）
+   - 探索多個區域時並行讀取檔案
 
-3. **Parallel Execution:**
-   - Execute independent tool calls in parallel
-   - Make sequential calls only when dependencies exist
-   - Never use placeholders in tool parameters
+3. **並行執行：**
+   - 並行執行獨立的工具呼叫
+   - 僅在存在依賴關係時進行順序呼叫
+   - 絕不在工具參數中使用佔位符
 
-### Communication Style
+### 溝通風格
 
-- Be concise and technical
-- Avoid emojis unless explicitly requested
-- Focus on facts and problem-solving
-- Use code references with `file:line` format
-- No unnecessary praise or validation
-
----
-
-## Future Development Roadmap
-
-### Phase 1: Project Initialization (Current)
-- [x] Create repository
-- [x] Add LICENSE
-- [x] Add test file for workflow verification
-- [x] Create CLAUDE.md documentation
-- [ ] Create README.md
-- [ ] Add .gitignore
-- [ ] Determine project purpose and technology stack
-
-### Phase 2: Project Setup
-- [ ] Initialize package manager
-- [ ] Set up project structure
-- [ ] Configure build tools
-- [ ] Set up testing framework
-- [ ] Configure linting and formatting
-- [ ] Set up pre-commit hooks
-
-### Phase 3: Core Development
-- [ ] Implement core functionality
-- [ ] Write tests
-- [ ] Create API documentation
-- [ ] Set up CI/CD pipeline
-
-### Phase 4: Documentation & Polish
-- [ ] Complete user documentation
-- [ ] Add code examples
-- [ ] Create contribution guidelines
-- [ ] Prepare for first release
+- 簡潔且技術性
+- 除非明確要求，否則避免使用表情符號
+- 專注於事實和問題解決
+- 使用 `檔案:行號` 格式的程式碼參考
+- 不需要不必要的讚美或驗證
 
 ---
 
-## Questions for Repository Owner
+## 未來開發藍圖
 
-To better assist with development, please clarify:
+### 階段 1：專案初始化（目前）
+- [x] 建立儲存庫
+- [x] 新增 LICENSE
+- [x] 新增測試檔案用於工作流程驗證
+- [x] 建立 CLAUDE.md 文件
+- [ ] 建立 README.md
+- [ ] 新增 .gitignore
+- [ ] 確定專案目的和技術堆疊
 
-1. **Project Purpose:** What is topsteps_code intended to do?
-2. **Technology Stack:** Which programming languages/frameworks should be used?
-3. **Target Users:** Who will use this project?
-4. **Key Features:** What are the primary features to implement?
-5. **Timeline:** Are there any deadlines or milestones?
-6. **Integration:** Will this integrate with other systems?
-7. **Deployment:** Where will this be deployed (cloud, on-premise, etc.)?
+### 階段 2：專案設定
+- [ ] 初始化套件管理器
+- [ ] 設定專案結構
+- [ ] 設定建置工具
+- [ ] 設定測試框架
+- [ ] 設定 linting 和格式化
+- [ ] 設定 pre-commit hooks
+
+### 階段 3：核心開發
+- [ ] 實作核心功能
+- [ ] 撰寫測試
+- [ ] 建立 API 文件
+- [ ] 設定 CI/CD 管線
+
+### 階段 4：文件與完善
+- [ ] 完成使用者文件
+- [ ] 新增程式碼範例
+- [ ] 建立貢獻指南
+- [ ] 準備首次發布
 
 ---
 
-## References & Resources
+## 給儲存庫擁有者的問題
+
+為了更好地協助開發，請澄清：
+
+1. **專案目的：** topsteps_code 的目的是什麼？
+2. **技術堆疊：** 應該使用哪些程式語言/框架？
+3. **目標使用者：** 誰會使用這個專案？
+4. **主要功能：** 要實作的主要功能是什麼？
+5. **時間表：** 是否有任何截止日期或里程碑？
+6. **整合：** 是否會與其他系統整合？
+7. **部署：** 將部署在哪裡（雲端、本地等）？
+
+---
+
+## 參考資源
 
 ### Git & GitHub
-- [Git Documentation](https://git-scm.com/doc)
+- [Git 文件](https://git-scm.com/doc)
 - [GitHub Flow](https://guides.github.com/introduction/flow/)
 - [Conventional Commits](https://www.conventionalcommits.org/)
 
-### Security
+### 安全性
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-- [Security Best Practices](https://cheatsheetseries.owasp.org/)
+- [安全最佳實踐](https://cheatsheetseries.owasp.org/)
 
 ### Claude Code
-- [Claude Code Documentation](https://docs.claude.com/en/docs/claude-code/)
+- [Claude Code 文件](https://docs.claude.com/en/docs/claude-code/)
 - [Claude Code GitHub](https://github.com/anthropics/claude-code)
 
 ---
 
-## Changelog
+## 變更日誌
 
 ### 2025-11-20
-- Created comprehensive CLAUDE.md documentation
-- Documented current repository state
-- Established development guidelines and conventions
-- Defined git workflow and branch strategy
-- Added AI assistant workflow instructions
+- 建立完整的 CLAUDE.md 文件
+- 記錄目前儲存庫狀態
+- 建立開發指南和慣例
+- 定義 git 工作流程和分支策略
+- 新增 AI 助理工作流程說明
 
 ### 2025-10-08
-- Repository initialized with MIT License
-- Added test.txt for workflow verification
-- First Claude-assisted commit
+- 使用 MIT License 初始化儲存庫
+- 新增 test.txt 用於工作流程驗證
+- 首次與 Claude 協作的提交
 
 ---
 
-## Contact & Support
+## 聯絡與支援
 
-- **Repository Owner:** CIOU,GUO-YU (jack chiou)
-- **GitHub Issues:** https://github.com/zxcvbn1294/topsteps_code/issues
-- **Claude Code Feedback:** https://github.com/anthropics/claude-code/issues
+- **儲存庫擁有者：** CIOU,GUO-YU (jack chiou)
+- **GitHub Issues：** https://github.com/zxcvbn1294/topsteps_code/issues
+- **Claude Code 回饋：** https://github.com/anthropics/claude-code/issues
 
 ---
 
-**Note:** This document should be updated as the project evolves. When making significant changes to project structure, conventions, or workflows, update this file accordingly.
+**注意：** 此文件應隨專案演進而更新。當專案結構、慣例或工作流程有重大變更時，請相應更新此檔案。
